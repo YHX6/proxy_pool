@@ -92,8 +92,8 @@ class ProxyFetcher(object):
     def freeProxy05(page_count=1):
         """ 快代理 https://www.kuaidaili.com """
         url_pattern = [
-            'https://www.kuaidaili.com/free/inha/{}/',
-            'https://www.kuaidaili.com/free/intr/{}/'
+            'https://www.kuaidaili.com/free/fps/{}/',
+            # 'https://www.kuaidaili.com/free/intr/{}/'
         ]
         url_list = []
         for page_index in range(1, page_count + 1):
@@ -132,7 +132,8 @@ class ProxyFetcher(object):
     @staticmethod
     def freeProxy08():
         """ 小幻代理 """
-        urls = ['https://ip.ihuan.me/address/5Lit5Zu9.html']
+        # urls = ['https://ip.ihuan.me/address/5Lit5Zu9.html']
+        urls = ["https://ip.ihuan.me/address/576O5Zu9.html"]
         for url in urls:
             r = WebRequest().get(url, timeout=10)
             proxies = re.findall(r'>\s*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*?</a></td><td>(\d+)</td>', r.text)
